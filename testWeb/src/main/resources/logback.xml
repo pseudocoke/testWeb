@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="true" scanPeriod="30 seconds">
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <Pattern>%d{HH:mm} %-5level %logger{36} - %msg%n</Pattern>
+        </encoder>
+    </appender>
+
+<!-- 
+    <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>/tmp/access.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>/tmp/access-%d{yyyy-MM-dd}.log</fileNamePattern>
+            <maxHistory>30</maxHistory>
+        </rollingPolicy>
+
+        <encoder>
+            <Pattern>%d{HH:mm} %-5level %logger{36} - %msg%n</Pattern>
+        </encoder>
+    </appender>
+ -->
+ 
+    <logger name="org.springframework" level="error"/>
+    <logger name="com.zaxxer.hikari" level="error"/>
+    <logger name="org.mybatis" level="error"/>
+    <logger name="org.apache" level="error"/>
+
+    <logger name="com.mass.db" level="info"/>
+    
+    <logger name="com.test" level="info"/>
+
+    <root level="info">
+        <appender-ref ref="CONSOLE"/>
+        <!-- <appender-ref ref="FILE"/>	-->
+    </root>
+</configuration>
