@@ -22,12 +22,12 @@
 		<org.springframework-version>5.2.22.RELEASE</org.springframework-version>
 
 	</properties>
-	
+
 	<repositories>
 		<repository>
 			<id>mass-repository</id>
 			<name>mass repository</name>
-			<url>http://133.130.103.202/repository</url>
+			<url>http://133.130.103.202/repository/</url>
 		</repository>
 	</repositories>
 
